@@ -51,3 +51,19 @@ class SmokeTestRunner {
 )
 class RegressionTestRunner {
 }
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+        features = "src/test/resources/features/google_search.feature",
+        glue = {"step_definitions"},
+        plugin = {
+                "pretty",
+                "html:target/cucumber-reports/google-search-report",
+                "json:target/cucumber-reports/GoogleSearch.json",
+                "junit:target/cucumber-reports/GoogleSearch.xml"
+        },
+        monochrome = true,
+        tags = "@smoke"
+)
+class GoogleSearchTestRunner {
+}
