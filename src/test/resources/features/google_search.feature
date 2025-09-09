@@ -6,7 +6,7 @@ So that I can find specific content like the Cucumber BDD article
   Background:
     Given the user is on Google homepage
 
-  @smoke
+  @smoke @google
   Scenario: Search for revanab.com articles and find Cucumber BDD article
     When the user searches for "site:revanab.com cucumber"
     Then search results should be displayed
